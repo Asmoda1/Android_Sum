@@ -1,5 +1,6 @@
 package com.example.calc;
 
+
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -48,9 +49,19 @@ public class MainActivity extends AppCompatActivity {
         editText_a.setOnKeyListener(myKeyListener);
         editText_b.setOnKeyListener(myKeyListener);
         editText_x.setOnKeyListener(myKeyListener);
+
+        if (savedInstanceState != null) {
+            textView_sum.setText(savedInstanceState.getString("c"));
+            buttonSum.setEnabled(true);
+        }
     }
 
-    public void onClick(View v) {
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("c", textView_sum.getText().toString());
+    }
+
+        public void onClick(View v) {
         double a, b, c, x;
 
         try {

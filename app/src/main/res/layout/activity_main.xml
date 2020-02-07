@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:accessibilityHeading="false"
     android:gravity="center"
-    android:orientation="vertical">
+    android:stretchColumns="*">
 
     <TableRow
         android:id="@+id/t1"
@@ -40,7 +40,6 @@
             android:hint="@string/a"
             android:inputType="textPersonName"
             tools:targetApi="o" />
-
     </TableRow>
 
     <TableRow
