@@ -1,6 +1,5 @@
 package com.example.calc;
 
-
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -23,13 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Доступ к компонентам окна
         editText_a = (EditText) findViewById(R.id.editText_a);
         editText_b = (EditText) findViewById(R.id.editText_b);
         editText_x = (EditText) findViewById(R.id.editText_x);
         textView_sum = (TextView) findViewById(R.id.textView_sum);
         buttonSum = (Button) findViewById(R.id.buttonSum);
-
 
         View.OnKeyListener myKeyListener = new View.OnKeyListener() {
             @Override
